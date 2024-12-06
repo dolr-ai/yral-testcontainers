@@ -1,5 +1,5 @@
 use testcontainers::{
-    core::{ContainerPort, WaitFor},
+    core::{wait::HttpWaitStrategy, ContainerPort, WaitFor},
     Image,
 };
 
@@ -25,7 +25,9 @@ impl Image for OffChainAgent {
     }
 
     fn ready_conditions(&self) -> Vec<WaitFor> {
-        vec![WaitFor::millis(1000)]
+        let wait_condition = HttpWaitStrategy::new("/healthz").with_expected_status_code(200u16);
+
+        vec![WaitFor::millis(1500), WaitFor::http(wait_condition)]
     }
 
     fn expose_ports(&self) -> &[ContainerPort] {
