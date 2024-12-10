@@ -1,3 +1,5 @@
+pub mod off_chain_agent;
+
 pub mod metadata {
     use testcontainers::{
         core::{ContainerPort, WaitFor},
