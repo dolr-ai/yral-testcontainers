@@ -22,7 +22,7 @@ pub mod metadata {
 
     impl Image for YralMetadata {
         fn name(&self) -> &str {
-            "ghcr.io/yral-dapp/yral-metadata-dev"
+            "ghcr.io/dolr-ai/yral-metadata-dev"
         }
 
         fn tag(&self) -> &str {
