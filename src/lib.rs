@@ -63,7 +63,7 @@ pub mod backend {
 
     impl Image for YralBackend {
         fn name(&self) -> &str {
-            "ghcr.io/yral-dapp/yral-backend-dev"
+            "ghcr.io/dolr-ai/yral-backend-dev"
         }
 
         fn tag(&self) -> &str {

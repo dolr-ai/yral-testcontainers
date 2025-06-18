@@ -17,7 +17,7 @@ impl OffChainAgent {
 
 impl Image for OffChainAgent {
     fn name(&self) -> &str {
-        "ghcr.io/yral-dapp/off-chain-agent"
+        "ghcr.io/dolr-ai/off-chain-agent"
     }
 
     fn tag(&self) -> &str {
